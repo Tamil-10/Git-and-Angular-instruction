@@ -6,7 +6,7 @@ For upload Project
 
 3) git commit -m "Add all my files" 
 
-4) git remote add origin <path> exp-https://github.com/Tamil-10/izoom_backup.git
+4) git remote add origin <path>https://github.com/Tamil-10/izoom_backup.git
 
 5) git pull origin master 
 
