@@ -1,0 +1,28 @@
+
+pushd <directory>
+
+mvn clean install
+
+pushd D:\izoom-service\target>java -jar izoom-service-0.1.jar com.izoom.izoomservice.IzoomServiceApplication
+
+
+mvn clean install
+mvn spring-boot:run
+./mvnw spring-boot:run
+
+
+
+ng build
+npm start 
+
+
+git add <path> (for particular files)
+
+
+./mvnw spring-boot:run
+
+------------------------------------------------------
+try
+npm install npm -g
+then do
+npm install -g markserv
