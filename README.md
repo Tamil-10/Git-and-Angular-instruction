@@ -27,4 +27,11 @@ for update
     git remote add origin <remote repository URL>
     
     git push origin master
+ 
+ ---------------------------------------------------------------------
+update
+-------
+git add .
+git commit -m 'whatever msg'
+git push origin master 
     
