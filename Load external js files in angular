@@ -1,0 +1,76 @@
+1)
+
+I had the same problem, but in my case, I was importing 10 libraries at the end of the html file, and these libraries have a lot of methods, listeners, events, and more, and in my case I didn't need to call a method specifically.
+
+The example about what I had:
+
+<!-- app.component.html -->
+
+<div> 
+ ...
+</div>
+
+<script src="http://www.some-library.com/library.js">
+<script src="../assets/js/my-library.js"> <!-- a route in my angular project -->
+As mentioned, it didn't work. Then, I find somehing that helped me: Milad response
+
+Remove the script calls in the app.component.html. You have to link these scripts in the app.component.ts file.
+
+In ngOnInit(), use a method to append the libraries, for example:
+
+``
+
+<!-- app.component.ts -->
+
+export class AppComponent implements OnInit {
+   title = 'app';
+   ngOnInit() {
+     this.loadScript('http://www.some-library.com/library.js');
+     this.loadScript('../assets/js/my-library.js');
+   }
+  }
+
+  public loadScript(url: string) {
+    const body = <HTMLDivElement> document.body;
+    const script = document.createElement('script');
+    script.innerHTML = '';
+    script.src = url;
+    script.async = false;
+    script.defer = true;
+    body.appendChild(script);
+  }
+}
+It functions for me. I use Angular 6, hope it helps
+
+------------------------------------------------------------------
+
+2)
+Just write a normal script loader :
+
+   public loadScript() {
+            let body = <HTMLDivElement> document.body;
+            let script = document.createElement('script');
+            script.innerHTML = '';
+            script.src = 'url';
+            script.async = true;
+            script.defer = true;
+            body.appendChild(script);
+    }
+and then call it where ever you want :
+
+export class MyComponent{
+
+    ngOnInit(){
+        this.loadScript();
+
+    }
+
+}
+But if those files are Typescript files, you can lazy load them as well in a numerous ways:
+
+1- Using the default module level lazy loading
+
+2- Using webpack's require
+
+3- Using SystemJs module loader
+-----------------------------------------------------------------
