@@ -35,3 +35,30 @@ git add .
 git commit -m 'whatever msg'
 git push origin master 
     
+-------------------------------------------------------------------------
+.gitignore
+------------
+
+create a text file
+
+rename git.txt .gitignore
+
+in .gitignore file 
+# dependencies 
+/node_modules
+
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+
+Then in your git bash you have to write the following line:
+
+git config --global core.excludesfile ~/.gitignore_global
+If the respository already exists then you have to do the following:
+
+1)git rm -r --cached .
+2)git add .
+3)git commit -m ".gitignore is now working"
