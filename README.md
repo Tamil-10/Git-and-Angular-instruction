@@ -65,6 +65,9 @@ If the respository already exists then you have to do the following:
 
 
 --------------------------------------------------------------
+Java Config
+-------
+
 Environment variables
 classpath  -  %m2_home%/lib;%java_home%/lib
 java_home  -  C:\Program Files\Java\jdk1.8.0_92
@@ -74,3 +77,5 @@ PATH       - C:\Users\NVS005\AppData\Local\Programs\Python\Python37\Scripts\;C:\
 
 
 Path       -  D:\app\NVS005\product\11.2.0\dbhome_2\bin;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\system32\Wbem;C:\ProgramData\Oracle\Java\javapath;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;%M2_HOME%\bin;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;%path%;C:\Program Files (x86)\Microsoft VS Code;D:\phantomjs-2.1.1-windows\bin;
+
+
