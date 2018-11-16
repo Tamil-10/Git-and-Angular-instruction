@@ -1,0 +1,59 @@
+
+pushd sjhk
+
+mvn clean install
+
+pushd D:\izoom-service\target>java -jar izoom-service-0.1.jar com.izoom.izoomservice.IzoomServiceApplication
+
+
+mvn clean install
+mvn spring-boot:run
+./mvnw spring-boot:run
+
+
+
+ng build
+npm start 
+
+///SKIP TEST AT CLEAN INSTALL
+mvn clean install -Dmaven.test.skip=true
+
+CREATE SEQUENCE PRO_TYPE_SEQ START WITH 1 INCREMENT BY 1 MINVALUE 1 NOMAXVALUE NOCYCLE CACHE 2;
+create sequence GEN_TYPE_SEQ start with 1 increment by 1 MINVALUE 1 NOMAXVALUE nocycle cache 2;
+
+git add <path> (for particular files)
+
+
+./mvnw spring-boot:run
+
+
+
+
+If you are using Maven, you can run the application using ./mvnw spring-boot:run. Or you can build the JAR file with ./mvnw clean package. Then you can run the JAR file:
+
+
+java -jar target/gs-actuator-service-0.1.0.jar
+
+118.139.181.86
+
+Deploying to GitHub Pages
+npm run deploy-to-ghpages
+
+  <div *ngIf="isLoading" class="loaderOverlay">
+      <div class="loader">Loading...</div>
+    </div>
+
+
+
+for build oracle jdbc
+
+
+C:\Users\itsupport\Downloads
+
+mvn install:install-file -Dfile=C:/Users/itsupport/Downloads/ojdbc6.jar -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.2.0.3 -Dpackaging=jar
+
+angular deploy
+ng build --prod --base-href=/gift
+
+<base href="/gift/">
+ng build
