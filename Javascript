@@ -1,0 +1,21 @@
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+
+export function validateEmail(email) {
+  return validEmailPattern.test(email);
+}
+
+export const validDomainPattern = new RegExp(
+  /^((?:(?:(?:\w[\.\-\+]?)*)\w)+)((?:(?:(?:\w[\.\-\+]?){0,62})\w)+)\.(\w{2,6})$/
+);
+
+export const validEmailPattern = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+
+export function checkIsValidDomain(domain) {
+  return validDomainPattern.test(domain);
+}
+
+export function getRandomNumber() {
+  return Math.random().toString(36);
+}
